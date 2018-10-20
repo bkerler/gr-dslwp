@@ -28,7 +28,7 @@ import xml.dom.minidom as minidom
 import pickle
 import urllib2
 
-from PyQt4 import QtGui, QtCore, Qt
+from PyQt5 import QtGui, QtCore, Qt, QtWidgets
 # import ui confige
 from ui.proxy_ui import Ui_MainWindow
 from ui.mini_window_ui import Ui_new_server_window
@@ -45,9 +45,9 @@ from core.connection_to_server_websocket import Websocket_send_thread
 from core.connection_to_server_socket import SocketSender
 
 
-class MainWindow(QtGui.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
-        QtGui.QWidget.__init__(self, parent)
+        QtWidgets.QWidget.__init__(self, parent)
         '''
         为了使用websocket， 先要启动MyThread线程
         '''
@@ -113,43 +113,43 @@ class MainWindow(QtGui.QMainWindow):
             [
                 'Port 1', 'Port 2', 'Port 3', 'Port 4', 'Port 5'])
         self.ui.port_list.setSelectionBehavior(
-            QtGui.QAbstractItemView.SelectRows)  # 一次选中一行
+            QtWidgets.QAbstractItemView.SelectRows)  # 一次选中一行
 
         # grc port select
         self.grc_port_list = list()
         for each in range(5):
-            self.grc_port_list.append(QtGui.QSpinBox())
+            self.grc_port_list.append(QtWidgets.QSpinBox())
             self.grc_port_list[each].setRange(1001, 65535)
             self.ui.port_list.setCellWidget(each, 0, self.grc_port_list[each])
         # sat_name
         self.sat_name_list = list()
         for each in range(5):
-            self.sat_name_list.append(QtGui.QLineEdit())
+            self.sat_name_list.append(QtWidgets.QLineEdit())
             self.sat_name_list[each].setMaximumSize(QtCore.QSize(82, 29))
             self.ui.port_list.setCellWidget(each, 1, self.sat_name_list[each])
         # channel
         self.channel_list = list()
         for each in range(5):
-            self.channel_list.append(QtGui.QSpinBox())
+            self.channel_list.append(QtWidgets.QSpinBox())
             self.channel_list[each].setRange(0, 10)
             self.ui.port_list.setCellWidget(each, 2, self.channel_list[each])
         # 服务器列表选择
         self.server_port_list = list()
         for each in range(5):
-            self.server_port_list.append(QtGui.QComboBox())
+            self.server_port_list.append(QtWidgets.QComboBox())
             self.ui.port_list.setCellWidget(
                 each, 3, self.server_port_list[each])
         # 协议选择
         self.protocol_list = list()
         for each in range(5):
-            cbox = QtGui.QComboBox()
+            cbox = QtWidgets.QComboBox()
             cbox.addItems(['websocket', 'socket', 'HTY'])
             self.protocol_list.append(cbox)
             self.ui.port_list.setCellWidget(each, 4, self.protocol_list[each])
         # proxy 使能选择
         self.enable_port_list = list()
         for each in range(5):
-            self.enable_port_list.append(QtGui.QCheckBox())
+            self.enable_port_list.append(QtWidgets.QCheckBox())
             self.ui.port_list.setCellWidget(
                 each, 5, self.enable_port_list[each])
         self.ui.port_list.resizeColumnsToContents()  # 自动列宽
@@ -178,9 +178,9 @@ class MainWindow(QtGui.QMainWindow):
         self.ui.server_list.itemDoubleClicked.connect(self.edit_server)
         # Initial refresh time for signal
         self.refresh_timer = QtCore.QTimer()
-        QtCore.QObject.connect(
-            self.refresh_timer, QtCore.SIGNAL("timeout()"),
-            self.on_timer)
+        #QtCore.QObject.connect(
+        #    self.refresh_timer, QtCore.SIGNAL("timeout()"),
+        #    self.on_timer)
         self.refresh_timer.start(500)
 
         # Setup console output, emmit stdout
@@ -656,7 +656,7 @@ class MainWindow(QtGui.QMainWindow):
         # Append text to the QTextEdit.
         str_buf = self.ui.log_text.toPlainText()
         str_buf = str_buf + text
-        length = str_buf.count()
+        length = len(str_buf)#str_buf.count()
 
         maxLength = 3000
         if(length > maxLength):
@@ -665,7 +665,7 @@ class MainWindow(QtGui.QMainWindow):
         self.ui.log_text.setText(str_buf)
         textCursor = self.ui.log_text.textCursor()
         self.ui.log_text.setText(str_buf)
-        textCursor.setPosition(str_buf.count())
+        textCursor.setPosition(len(str_buf))
         self.ui.log_text.setTextCursor(textCursor)
 
     def on_timer(self):
@@ -730,10 +730,10 @@ class MainWindow(QtGui.QMainWindow):
         retval = msg.exec_()
 
 
-class mini_window(QtGui.QWidget):
+class mini_window(QtWidgets.QWidget):
 
     def __init__(self, data, father_app, current_info, parent=None):
-        QtGui.QWidget.__init__(self, parent)
+        QtWidgets.QWidget.__init__(self, parent)
         self.data = data
         self.current_info = current_info
         self.father = father_app
@@ -803,7 +803,7 @@ class EmittingStream(QtCore.QObject):
 
 
 if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
+    app = QtWidgets.QApplication(sys.argv)
     myapp = MainWindow()
     myapp.show()
     sys.exit(app.exec_())

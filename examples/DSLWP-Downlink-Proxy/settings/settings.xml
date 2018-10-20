@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <settings>
-<nickname>EA4GPZ</nickname>
-<lon>-3</lon>
-<lat>41</lat>
-<alt>750</alt>
+<nickname>PI9CAM-WEBSDR</nickname>
+<lon>6.39616944</lon>
+<lat>52.81201944</lat>
+<alt>25</alt>
 <backup_server_url>null</backup_server_url>
 <back_server_enable>0</back_server_enable>
 <tle_url>http://lilacsat.hit.edu.cn/tle/dslwp.txt</tle_url>
