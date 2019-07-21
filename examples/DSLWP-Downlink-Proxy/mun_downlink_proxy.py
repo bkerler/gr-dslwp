@@ -659,8 +659,8 @@ class MainWindow(QtWidgets.QMainWindow):
         length = len(str_buf)#str_buf.count()
 
         maxLength = 3000
-        if(length > maxLength):
-            str_buf.remove(0, length - maxLength)
+        #if(length > maxLength):
+        #    str_buf.remove(0, length - maxLength)
 
         self.ui.log_text.setText(str_buf)
         textCursor = self.ui.log_text.textCursor()
