@@ -43,9 +43,9 @@ namespace gr {
      */
 	  oqpsk_coherent_demod_cc_impl::oqpsk_coherent_demod_cc_impl(int samples_per_symbol, const std::vector<gr_complex> &taps, int opt_point, int pll, float pll_loop_bw, float pll_damping, float freq_max, float freq_min, int dttl, float dttl_loop_bw, float dttl_damping, float max_rate_deviation, int asm_ignore)
       : gr::block("oqpsk_coherent_demod_cc",
-              gr::io_signature::make(1, 1, sizeof(gr_complex)),
-              gr::io_signature::make(1, 1, sizeof(gr_complex))),
-      d_samples_per_symbol(samples_per_symbol), d_taps(taps), d_opt_point(opt_point), d_pll(pll), d_pll_loop_bw(pll_loop_bw), d_pll_damping(pll_damping), d_freq_max(freq_max), d_freq_min(freq_min), d_dttl(dttl), d_dttl_loop_bw(dttl_loop_bw), d_dttl_damping(dttl_damping), d_max_rate_deviation(max_rate_deviation), d_asm_ignore(asm_ignore), d_symbols_since_asm(0)
+		  gr::io_signature::make(1, 1, sizeof(gr_complex)),
+		  gr::io_signature::make2(2, 2, sizeof(gr_complex), sizeof(gr_complex) * samples_per_symbol)),
+		  d_samples_per_symbol(samples_per_symbol), d_taps(taps), d_opt_point(opt_point), d_pll(pll), d_pll_loop_bw(pll_loop_bw), d_pll_damping(pll_damping), d_freq_max(freq_max), d_freq_min(freq_min), d_dttl(dttl), d_dttl_loop_bw(dttl_loop_bw), d_dttl_damping(dttl_damping), d_max_rate_deviation(max_rate_deviation), d_asm_ignore(asm_ignore), d_symbols_since_asm(0)
     {
 		d_mix_out = (gr_complex *)malloc(sizeof(gr_complex)*taps.size());		
 		for(int i=0; i<taps.size(); i++)
@@ -57,6 +57,12 @@ namespace gr {
 		for(int i=0; i<samples_per_symbol/2+1; i++)
 		{
 			d_mf_out[i] = 1.0f;
+		}
+
+		d_mf_out_long = (gr_complex *)malloc(sizeof(gr_complex)*samples_per_symbol);
+		for(int i=0; i<samples_per_symbol; i++)
+		{
+			d_mf_out_long[i] = 1.0f;
 		}
 
 		float denom = 1.0f + 2.0f*pll_damping*pll_loop_bw + pll_loop_bw*pll_loop_bw;
@@ -92,6 +98,7 @@ namespace gr {
     {
       const gr_complex *in = (const gr_complex *) input_items[0];
       gr_complex *out = (gr_complex *) output_items[0];
+      gr_complex *out_eye = (gr_complex *) output_items[1];
       int i_output = 0;
       bool use_asm;
 
@@ -201,6 +208,12 @@ namespace gr {
 			d_mf_out[d_samples_per_symbol/2] = d_mf_out[d_samples_per_symbol/2] + d_mix_out[j] * d_taps[j];
 		}
 
+		for(int j=0; j<d_samples_per_symbol; j++)
+		{
+			d_mf_out_long[j] = d_mf_out_long[j+1];
+		}
+		d_mf_out_long[d_samples_per_symbol-1] = d_mf_out[d_samples_per_symbol/2];
+
 		float pd_out;
 		if( d_sample_in_symbol==d_opt_point )
 		{
@@ -210,6 +223,7 @@ namespace gr {
 
 			/* For opt_point=4, [B0, B1], [B2, B3]... */
 			out[i_output] = d_mf_out[0].imag() + 1j*d_mf_out[d_samples_per_symbol/2].real();
+			memcpy(out_eye + i_output * d_samples_per_symbol, d_mf_out_long, sizeof(gr_complex) * d_samples_per_symbol); 
 			i_output++;
 			d_symbols_since_asm++;
 

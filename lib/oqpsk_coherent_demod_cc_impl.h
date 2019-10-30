@@ -44,6 +44,7 @@ namespace gr {
 
 		gr_complex *d_mix_out;
 		gr_complex *d_mf_out;
+	        gr_complex *d_mf_out_long;
 		float d_alpha;
 		float d_beta;
 		int d_sample_in_symbol;

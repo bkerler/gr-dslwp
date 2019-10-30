@@ -105,4 +105,9 @@
     <name>out</name>
     <type>complex</type>
   </source>
+  <source>
+    <name>eye_diagram</name>
+    <type>complex</type>
+    <vlen>$samples_per_symbol</vlen>
+  </source>
 </block>
