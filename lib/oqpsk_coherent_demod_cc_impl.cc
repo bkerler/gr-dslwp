@@ -45,7 +45,7 @@ namespace gr {
       : gr::block("oqpsk_coherent_demod_cc",
 		  gr::io_signature::make(1, 1, sizeof(gr_complex)),
 		  gr::io_signature::make3(4, 4, sizeof(gr_complex), sizeof(gr_complex) * samples_per_symbol, sizeof(float))),
-		  d_samples_per_symbol(samples_per_symbol), d_taps(taps), d_opt_point(opt_point), d_pll(pll), d_pll_loop_bw(pll_loop_bw), d_pll_damping(pll_damping), d_freq_max(freq_max), d_freq_min(freq_min), d_dttl(dttl), d_dttl_loop_bw(dttl_loop_bw), d_dttl_damping(dttl_damping), d_max_rate_deviation(max_rate_deviation), d_asm_ignore(asm_ignore), d_symbols_since_asm(0)
+		  d_samples_per_symbol(samples_per_symbol), d_taps(taps), d_opt_point(opt_point), d_pll(pll), d_pll_loop_bw(pll_loop_bw), d_pll_damping(pll_damping), d_freq_max(freq_max), d_freq_min(freq_min), d_dttl(dttl), d_dttl_loop_bw(dttl_loop_bw), d_dttl_damping(dttl_damping), d_max_rate_deviation(max_rate_deviation), d_asm_ignore(asm_ignore), d_symbols_since_asm(-1)
     {
 		d_mix_out = (gr_complex *)malloc(sizeof(gr_complex)*taps.size());		
 		for(int i=0; i<taps.size(); i++)
@@ -109,7 +109,7 @@ namespace gr {
 		std::vector<tag_t> tags;
 		get_tags_in_window(tags, 0, i, i+1);
 
-		use_asm = d_symbols_since_asm >= d_asm_ignore;
+		use_asm = d_symbols_since_asm >= d_asm_ignore || d_symbols_since_asm == -1;
 		for(int j=0; j<tags.size(); j++)
 		{
 			if(tags[j].key == pmt::mp("corr_start"))
@@ -229,7 +229,7 @@ namespace gr {
 			out_phase[i_output] = d_phase;
 			out_freq[i_output] = d_freq;
 			i_output++;
-			d_symbols_since_asm++;
+			if (d_symbols_since_asm >= 0) d_symbols_since_asm++;
 
 			/* For opt_point=12, [B-1, B0], [B1, B2]... */
 			//pd_out = d_mf_out[0].real()*d_mf_out[0].imag() - d_mf_out[d_samples_per_symbol/2].real()*d_mf_out[d_samples_per_symbol/2].imag();
