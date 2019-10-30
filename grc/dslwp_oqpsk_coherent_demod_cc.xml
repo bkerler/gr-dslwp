@@ -110,4 +110,12 @@
     <type>complex</type>
     <vlen>$samples_per_symbol</vlen>
   </source>
+  <source>
+    <name>phase</name>
+    <type>float</type>
+  </source>
+  <source>
+    <name>freq</name>
+    <type>float</type>
+  </source>
 </block>
