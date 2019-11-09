@@ -113,7 +113,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>-5</value>
+      <value>-4</value>
     </param>
   </block>
   <block>
@@ -860,6 +860,37 @@
     </param>
   </block>
   <block>
+    <key>blocks_message_debug</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(176, 928)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_message_debug_0_0_0</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_multiply_const_vxx</key>
     <param>
       <key>alias</key>
@@ -1068,6 +1099,237 @@
     </param>
   </block>
   <block>
+    <key>dslwp_ccsds_pseudo_randomizer</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>data_format</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(992, 820)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_ccsds_pseudo_randomizer_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>dslwp_ccsds_turbo_decode</key>
+    <param>
+      <key>base</key>
+      <value>223</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>code_type</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(968, 868)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_ccsds_turbo_decode_0</value>
+    </param>
+    <param>
+      <key>iterations</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>octets</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>sigma</key>
+      <value>0.707</value>
+    </param>
+    <param>
+      <key>update_sigma</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>dslwp_frame_spliter_c</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>frame_length</key>
+      <value>7152</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(736, 812)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_frame_spliter_c_0_0</value>
+    </param>
+    <param>
+      <key>key</key>
+      <value>payload_start</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>dslwp_kiss_decode_pdu</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 864)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_kiss_decode_pdu_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>dslwp_kiss_decode_pdu</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 800)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_kiss_decode_pdu_1</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>dslwp_oqpsk_coherent_demod_cc</key>
     <param>
       <key>asm_ignore</key>
@@ -1206,6 +1468,76 @@
     </param>
   </block>
   <block>
+    <key>dslwp_tm_header_parser</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(144, 800)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_tm_header_parser_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>dslwp_tm_parser</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(592, 800)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dslwp_tm_parser_0</value>
+    </param>
+  </block>
+  <block>
     <key>epy_block</key>
     <param>
       <key>alias</key>
@@ -1306,7 +1638,7 @@ class blk(gr.basic_block):  # other base classes are basic_block, decim_block, i
     </param>
     <param>
       <key>threshold</key>
-      <value>0.5</value>
+      <value>0.07</value>
     </param>
     <param>
       <key>v_len</key>
@@ -1427,7 +1759,7 @@ class blk(gr.basic_block):  # other base classes are basic_block, decim_block, i
     </param>
     <param>
       <key>cutoff_freq</key>
-      <value>1.9e3</value>
+      <value>0*350 + 1.9e3</value>
     </param>
     <param>
       <key>decim</key>
@@ -2826,6 +3158,36 @@ class blk(gr.basic_block):  # other base classes are basic_block, decim_block, i
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>dslwp_ccsds_pseudo_randomizer_0</source_block_id>
+    <sink_block_id>dslwp_ccsds_turbo_decode_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_ccsds_turbo_decode_0</source_block_id>
+    <sink_block_id>dslwp_tm_header_parser_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_frame_spliter_c_0_0</source_block_id>
+    <sink_block_id>dslwp_ccsds_pseudo_randomizer_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_kiss_decode_pdu_0</source_block_id>
+    <sink_block_id>dslwp_tm_parser_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_kiss_decode_pdu_1</source_block_id>
+    <sink_block_id>dslwp_tm_parser_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
     <source_block_id>dslwp_oqpsk_coherent_demod_cc_0</source_block_id>
     <sink_block_id>blocks_file_sink_2</sink_block_id>
     <source_key>1</source_key>
@@ -2846,6 +3208,12 @@ class blk(gr.basic_block):  # other base classes are basic_block, decim_block, i
   <connection>
     <source_block_id>dslwp_oqpsk_coherent_demod_cc_0</source_block_id>
     <sink_block_id>blocks_tag_debug_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_oqpsk_coherent_demod_cc_0</source_block_id>
+    <sink_block_id>dslwp_frame_spliter_c_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -2872,6 +3240,24 @@ class blk(gr.basic_block):  # other base classes are basic_block, decim_block, i
     <sink_block_id>dslwp_oqpsk_coherent_demod_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_tm_header_parser_0</source_block_id>
+    <sink_block_id>dslwp_kiss_decode_pdu_1</sink_block_id>
+    <source_key>out 0</source_key>
+    <sink_key>in</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_tm_header_parser_0</source_block_id>
+    <sink_block_id>blocks_message_debug_0_0_0</sink_block_id>
+    <source_key>out 1</source_key>
+    <sink_key>print_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>dslwp_tm_header_parser_0</source_block_id>
+    <sink_block_id>dslwp_kiss_decode_pdu_0</sink_block_id>
+    <source_key>out 2</source_key>
+    <sink_key>in</sink_key>
   </connection>
   <connection>
     <source_block_id>epy_block_0</source_block_id>
