@@ -149,7 +149,7 @@ blocks:
     nthreads: nthreads
     shift: 'False'
     type: complex
-    window: ''
+    window: window.rectangular(fft_size)
   states:
     bus_sink: false
     bus_source: false
