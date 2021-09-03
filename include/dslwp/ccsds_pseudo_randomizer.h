@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API ccsds_pseudo_randomizer : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<ccsds_pseudo_randomizer> sptr;
+      typedef std::shared_ptr<ccsds_pseudo_randomizer> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::ccsds_pseudo_randomizer.

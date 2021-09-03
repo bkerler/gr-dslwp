@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API set_gain_by_tag_cc : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<set_gain_by_tag_cc> sptr;
+      typedef std::shared_ptr<set_gain_by_tag_cc> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::set_gain_by_tag_cc.

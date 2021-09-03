@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API frame_spliter_c : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<frame_spliter_c> sptr;
+      typedef std::shared_ptr<frame_spliter_c> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::frame_spliter_c.

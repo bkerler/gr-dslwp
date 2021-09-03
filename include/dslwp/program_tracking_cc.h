@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API program_tracking_cc : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<program_tracking_cc> sptr;
+      typedef std::shared_ptr<program_tracking_cc> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::program_tracking_cc.

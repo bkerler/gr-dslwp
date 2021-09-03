@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API vector_padding_cc : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<vector_padding_cc> sptr;
+      typedef std::shared_ptr<vector_padding_cc> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::vector_padding_cc.

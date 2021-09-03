@@ -57,7 +57,7 @@ namespace gr {
 	d_ptt_port = pmt::mp("ptt");
       	message_port_register_out(d_ptt_port);
 
-	set_msg_handler(d_in_port, boost::bind(&fec_encode_b_impl::pmt_in_callback, this ,_1) );
+        set_msg_handler(d_in_port, [this](pmt::pmt_t msg) { this->pmt_in_callback(msg); });
 	set_output_multiple(16);
 	ccsds_init(&cc, 0x1ACFFC1D, frame_len, this, 0);
 	cc.cfg_preamble_len = preamble_len;

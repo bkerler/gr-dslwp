@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API differential_phase_detection_1bit_cf : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<differential_phase_detection_1bit_cf> sptr;
+      typedef std::shared_ptr<differential_phase_detection_1bit_cf> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::differential_phase_detection_1bit_cf.

@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API oqpsk_coherent_demod_cc : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<oqpsk_coherent_demod_cc> sptr;
+      typedef std::shared_ptr<oqpsk_coherent_demod_cc> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::oqpsk_coherent_demod_cc.

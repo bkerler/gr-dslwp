@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API attach_sync_marker : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<attach_sync_marker> sptr;
+      typedef std::shared_ptr<attach_sync_marker> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::attach_sync_marker.

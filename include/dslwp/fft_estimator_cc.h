@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API fft_estimator_cc : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<fft_estimator_cc> sptr;
+      typedef std::shared_ptr<fft_estimator_cc> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::fft_estimator_cc.

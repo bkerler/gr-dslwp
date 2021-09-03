@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API kiss_decode_pdu : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<kiss_decode_pdu> sptr;
+      typedef std::shared_ptr<kiss_decode_pdu> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::kiss_decode_pdu.

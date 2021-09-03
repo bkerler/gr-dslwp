@@ -36,7 +36,7 @@ namespace gr {
     class DSLWP_API ccsds_turbo_decode : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<ccsds_turbo_decode> sptr;
+      typedef std::shared_ptr<ccsds_turbo_decode> sptr;
 
       /*!
        * \brief Return a shared_ptr to a new instance of dslwp::ccsds_turbo_decode.
