@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_CCSDS_TURBO_DECODE_IMPL_H
 #define INCLUDED_DSLWP_CCSDS_TURBO_DECODE_IMPL_H
 
-#include <dslwp/ccsds_turbo_decode.h>
+#include <gnuradio/dslwp/ccsds_turbo_decode.h>
 extern "C"
 {
 	#include "ccsds/libconvcodes.h"

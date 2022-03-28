@@ -41,7 +41,9 @@
 
 #include <stdlib.h>
 #include <math.h>
-
+#define M_PI 3.14159265358979323846    /* pi */
+#define M_SQRT2 1.41421356237309504880 /* sqrt(2) */
+#define M_LOG2E   1.4426950408889634074 /* log_2 e */
 //declare erf in case it was missing in math.h and provided for by the build system
 extern double erf(double x);
 

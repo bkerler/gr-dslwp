@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_VECTOR_PADDING_CC_IMPL_H
 #define INCLUDED_DSLWP_VECTOR_PADDING_CC_IMPL_H
 
-#include <dslwp/vector_padding_cc.h>
+#include <gnuradio/dslwp/vector_padding_cc.h>
 
 namespace gr {
   namespace dslwp {

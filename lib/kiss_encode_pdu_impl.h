@@ -28,7 +28,7 @@
 #ifndef INCLUDED_DSLWP_KISS_ENCODE_PDU_IMPL_H
 #define INCLUDED_DSLWP_KISS_ENCODE_PDU_IMPL_H
 
-#include <dslwp/kiss_encode_pdu.h>
+#include <gnuradio/dslwp/kiss_encode_pdu.h>
 
 extern "C"
 {

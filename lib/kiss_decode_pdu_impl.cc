@@ -56,7 +56,7 @@ namespace gr {
 	d_out_port = pmt::mp("out");	      
       	message_port_register_out(d_out_port);
 
-	set_msg_handler(d_in_port, boost::bind(&kiss_decode_pdu_impl::pmt_in_callback, this ,_1) );
+        set_msg_handler(d_in_port, [this](pmt::pmt_t msg) { this->pmt_in_callback(msg); });
 
 	kiss_init(&ki, (void *)this, &kiss_decode_pdu_impl::kiss_msg_callback);
     }

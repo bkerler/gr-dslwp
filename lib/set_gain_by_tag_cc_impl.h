@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_SET_GAIN_BY_TAG_CC_IMPL_H
 #define INCLUDED_DSLWP_SET_GAIN_BY_TAG_CC_IMPL_H
 
-#include <dslwp/set_gain_by_tag_cc.h>
+#include <gnuradio/dslwp/set_gain_by_tag_cc.h>
 
 namespace gr {
   namespace dslwp {

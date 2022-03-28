@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_LRTC_MOD_BC_IMPL_H
 #define INCLUDED_DSLWP_LRTC_MOD_BC_IMPL_H
 
-#include <dslwp/lrtc_mod_bc.h>
+#include <gnuradio/dslwp/lrtc_mod_bc.h>
 
 namespace gr {
   namespace dslwp {

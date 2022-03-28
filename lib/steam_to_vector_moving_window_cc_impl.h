@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_STEAM_TO_VECTOR_MOVING_WINDOW_CC_IMPL_H
 #define INCLUDED_DSLWP_STEAM_TO_VECTOR_MOVING_WINDOW_CC_IMPL_H
 
-#include <dslwp/steam_to_vector_moving_window_cc.h>
+#include <gnuradio/dslwp/steam_to_vector_moving_window_cc.h>
 
 namespace gr {
   namespace dslwp {

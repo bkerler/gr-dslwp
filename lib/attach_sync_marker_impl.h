@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_ATTACH_SYNC_MARKER_IMPL_H
 #define INCLUDED_DSLWP_ATTACH_SYNC_MARKER_IMPL_H
 
-#include <dslwp/attach_sync_marker.h>
+#include <gnuradio/dslwp/attach_sync_marker.h>
 
 namespace gr {
   namespace dslwp {

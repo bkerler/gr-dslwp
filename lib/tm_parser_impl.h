@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_TM_PARSER_IMPL_H
 #define INCLUDED_DSLWP_TM_PARSER_IMPL_H
 
-#include <dslwp/tm_parser.h>
+#include <gnuradio/dslwp/tm_parser.h>
 
 namespace gr {
   namespace dslwp {

@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_CCSDS_PSEUDO_RANDOMIZER_IMPL_H
 #define INCLUDED_DSLWP_CCSDS_PSEUDO_RANDOMIZER_IMPL_H
 
-#include <dslwp/ccsds_pseudo_randomizer.h>
+#include <gnuradio/dslwp/ccsds_pseudo_randomizer.h>
 extern "C"
 {
 	#include "ccsds/randomizer.h"

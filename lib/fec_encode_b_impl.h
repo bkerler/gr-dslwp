@@ -28,7 +28,7 @@
 #ifndef INCLUDED_DSLWP_fec_encode_b_IMPL_H
 #define INCLUDED_DSLWP_fec_encode_b_IMPL_H
 
-#include <dslwp/fec_encode_b.h>
+#include <gnuradio/dslwp/fec_encode_b.h>
 
 extern "C"
 {

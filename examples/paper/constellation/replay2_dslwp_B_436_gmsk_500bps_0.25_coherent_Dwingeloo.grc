@@ -507,7 +507,7 @@
     </param>
     <param>
       <key>win</key>
-      <value>firdes.WIN_HAMMING</value>
+      <value>window.WIN_HAMMING</value>
     </param>
   </block>
   <block>
@@ -1468,7 +1468,7 @@
     </param>
     <param>
       <key>win</key>
-      <value>firdes.WIN_HAMMING</value>
+      <value>window.WIN_HAMMING</value>
     </param>
   </block>
   <block>
@@ -2098,7 +2098,7 @@
     </param>
     <param>
       <key>wintype</key>
-      <value>firdes.WIN_BLACKMAN_hARRIS</value>
+      <value>window.WIN_BLACKMAN_hARRIS</value>
     </param>
     <param>
       <key>label</key>
@@ -2337,7 +2337,7 @@
     </param>
     <param>
       <key>wintype</key>
-      <value>firdes.WIN_BLACKMAN_hARRIS</value>
+      <value>window.WIN_BLACKMAN_hARRIS</value>
     </param>
   </block>
   <connection>

@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_DIFFERENTIAL_PHASE_DETECTION_1BIT_CF_IMPL_H
 #define INCLUDED_DSLWP_DIFFERENTIAL_PHASE_DETECTION_1BIT_CF_IMPL_H
 
-#include <dslwp/differential_phase_detection_1bit_cf.h>
+#include <gnuradio/dslwp/differential_phase_detection_1bit_cf.h>
 
 namespace gr {
   namespace dslwp {

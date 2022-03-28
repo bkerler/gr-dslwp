@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_FFT_ESTIMATOR_CC_IMPL_H
 #define INCLUDED_DSLWP_FFT_ESTIMATOR_CC_IMPL_H
 
-#include <dslwp/fft_estimator_cc.h>
+#include <gnuradio/dslwp/fft_estimator_cc.h>
 
 namespace gr {
   namespace dslwp {

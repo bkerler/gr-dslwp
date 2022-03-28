@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_PROGRAM_TRACKING_CC_IMPL_H
 #define INCLUDED_DSLWP_PROGRAM_TRACKING_CC_IMPL_H
 
-#include <dslwp/program_tracking_cc.h>
+#include <gnuradio/dslwp/program_tracking_cc.h>
 #include <stdio.h>
 #include <inttypes.h>
 #include <time.h>

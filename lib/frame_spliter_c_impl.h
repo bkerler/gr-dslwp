@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_FRAME_SPLITER_C_IMPL_H
 #define INCLUDED_DSLWP_FRAME_SPLITER_C_IMPL_H
 
-#include <dslwp/frame_spliter_c.h>
+#include <gnuradio/dslwp/frame_spliter_c.h>
 
 namespace gr {
   namespace dslwp {

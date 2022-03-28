@@ -21,7 +21,7 @@
 #ifndef INCLUDED_DSLWP_OQPSK_COHERENT_DEMOD_CC_IMPL_H
 #define INCLUDED_DSLWP_OQPSK_COHERENT_DEMOD_CC_IMPL_H
 
-#include <dslwp/oqpsk_coherent_demod_cc.h>
+#include <gnuradio/dslwp/oqpsk_coherent_demod_cc.h>
 
 namespace gr {
   namespace dslwp {
