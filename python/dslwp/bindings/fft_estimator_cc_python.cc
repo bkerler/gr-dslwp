@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(fft_estimator_cc.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(182f5f9a4c711b53cd8694dd0e784829)                     */
+/* BINDTOOL_HEADER_FILE_HASH(4d097bcfa6adc16b59d41622919d927c)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
